@@ -12,7 +12,7 @@ public class Game {
         height = h;
     }
 
-    private void gameLoop () {
+    public void gameLoop () {
         while (!gameOver) {
             platform.move();                
             ball.move();
