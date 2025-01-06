@@ -2,7 +2,6 @@ public class Block {
     private int[] pos;
     private int width, height;
 
-    //0.045, 0.016
     
     public Block(int x, int y, int w, int h) {
         pos = new int[] {x, y};
@@ -20,5 +19,9 @@ public class Block {
 
     public int getHeight() {
         return height;
+    }
+
+    private void drawBlock() {
+        StdDraw.filledRectangle(pos[0], pos[1], width, height);
     }
 }
