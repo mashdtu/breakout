@@ -1,24 +1,24 @@
 public class Block {
-    private double[] pos;
-    private double width, height;
+    private int[] pos;
+    private int width, height;
 
     //0.045, 0.016
     
-    public Block(double x, double y, double w, double h) {
-        pos = new double[] {x, y};
+    public Block(int x, int y, int w, int h) {
+        pos = new int[] {x, y};
         width = w;
         height = h;
     }
 
-    public double[] getPos() {
+    public int[] getPos() {
         return pos;
     }
 
-    public double getWidth() {
+    public int getWidth() {
         return width;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
 }
