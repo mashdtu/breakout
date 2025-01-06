@@ -14,6 +14,15 @@ public class Ball {
         pos[1] += vel[1];
     }
 
+    public boolean outOfBounds() {
+        return pos[1] < 0;
+    }
+
+    public void setPos(int x, int y) {
+        pos[0] = x;
+        pos[1] = y;
+    }
+
     public void setVel(int vx, int vy) {
         vel[0] = vx;
         vel[1] = vy;

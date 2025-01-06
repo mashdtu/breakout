@@ -21,12 +21,14 @@ public class Game {
             
 
             // Check for win/lose conditions
+            gameOver = ball.outOfBounds() ? true : gameOver;
+            gameOver = blocks.length < 1 ? true : gameOver;
 
 
             // Draw the game
 
 
-            // Delay to match framerate (~60fps, i.e. 60/1000 ms delay)
+            // Delay to match framerate (~60fps, i.e. 1000/60 ms delay)
             try {
                 Thread.sleep(16); 
             } catch(InterruptedException e) {
