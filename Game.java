@@ -40,8 +40,13 @@ public class Game {
         }
     }
 
+    private void drawStartSetup()
+    {
+        gameSetup.drawStartGame();
+    }
+
     private void setInitialBlocks() {
-        gameSetup.drawBlocks();
+        //
     }
     
     public Platform getPlatform() {

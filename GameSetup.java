@@ -8,7 +8,13 @@ public class GameSetup
     private int ySize = 4; 
     private Block[][] nrOfTargets = new Block[xSize][ySize];
 
-    public void drawBlocks()
+    public void drawStartGame()
+    {
+        drawBlocks();
+        drawWalls();
+    }
+
+    private void drawBlocks()
     {
         for(int i = 0; i < ySize; i++)
         {
@@ -20,6 +26,11 @@ public class GameSetup
                 pos[1] = pos[1] + i * 35;
             }
         }
+    }
+
+    public void drawWalls()
+    {
+
     }
 
    
