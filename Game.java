@@ -18,12 +18,20 @@ public class Game {
             ball.move();
 
             // Check for collisions
-
+            
 
             // Check for win/lose conditions
 
 
             // Draw the game
+
+
+            // Delay to match framerate (~60fps, i.e. 60/1000 ms delay)
+            try {
+                Thread.sleep(16); 
+            } catch(InterruptedException e) {
+                // Do nothing.
+            }
 
         }
     }
