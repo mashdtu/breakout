@@ -30,7 +30,9 @@ public class GameSetup
 
     public void drawWalls()
     {
-
+        StdDraw.filledRectangle(90, 350, 5, 200);
+        StdDraw.filledRectangle(740, 350, 5, 200);
+        StdDraw.filledRectangle(410, 545, 325, 5);
     }
 
    
