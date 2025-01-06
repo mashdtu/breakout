@@ -4,6 +4,8 @@ public class Game {
     private Block[] blocks;
     private int width, height;
     private boolean gameOver = false;
+
+    private GameSetup gameSetup = new GameSetup();
     
     public Game(Platform p, Ball b, int w, int h) {
         platform = p;
@@ -39,7 +41,7 @@ public class Game {
     }
 
     private void setInitialBlocks() {
-        // Block block = new Block(0, 0, 0, 0);
+        gameSetup.drawBlock();
     }
     
     public Platform getPlatform() {

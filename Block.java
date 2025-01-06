@@ -21,7 +21,7 @@ public class Block {
         return height;
     }
 
-    private void drawBlock() {
+    public void drawBlock() {
         StdDraw.filledRectangle(pos[0], pos[1], width, height);
     }
 }
