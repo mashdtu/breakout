@@ -41,7 +41,7 @@ public class Game {
     }
 
     private void setInitialBlocks() {
-        gameSetup.drawBlock();
+        gameSetup.drawBlocks();
     }
     
     public Platform getPlatform() {
