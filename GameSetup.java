@@ -65,5 +65,19 @@ public class GameSetup
         //platform.draw();
     }
 
+    public Block[][] getBlocks()
+    {
+        return nrOfTargets;
+    }
+
+    public Wall[] getWalls()
+    {
+        return wall;
+    }
+
+    public Platform gPlatform()
+    {
+        return platform;
+    }
    
 }
