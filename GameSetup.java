@@ -31,9 +31,9 @@ public class GameSetup
     private void drawBlocks()
     {
         StdDraw.setPenColor(StdDraw.BLUE);
-        for(int i = 0; i < ySize; i++)
+        for(int i = 0; i <= ySize; i++)
         {
-            for(int j = 0; j < xSize; j++)
+            for(int j = 0; j <= xSize; j++)
             {
                 nrOfTargets[j][i] = new Block(pos[0] + j * 62 , pos[1] - i * 35 , width , height);
                 nrOfTargets[j][i].drawBlock();
