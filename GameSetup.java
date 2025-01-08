@@ -10,6 +10,7 @@ public class GameSetup
     //objects
     private Block[][] nrOfTargets = new Block[xSize][ySize];
     private Platform platform;
+    private Ball ball;
     private Wall[] wall = new Wall[3];
 
     public void drawStartGame()
@@ -18,6 +19,7 @@ public class GameSetup
         drawBlocks();
         drawWalls();
         drawPlatform();
+        drawBall();
     }
 
     private void drawBackgound()
@@ -63,6 +65,11 @@ public class GameSetup
         //platform = new Platform(400, 150, 50, 5, 0.02);
 
         //platform.draw();
+    }
+
+    private void drawBall()
+    {
+        ball = new Ball(400, 250, 0, 0, 7);
     }
 
     public Block[][] getBlocks()
