@@ -49,6 +49,7 @@ public class Game {
         platform = gameSetup.getPlatform();
         wall = gameSetup.getWalls();
         blocks = gameSetup.getBlocks();
+        ball = gameSetup.getBall();
     }
 
     private void setInitialBlocks() {
@@ -63,7 +64,7 @@ public class Game {
         return ball;
     }
 
-    public Block[] getBlocks() {
+    public Block[][] getBlocks() {
         return blocks;
     }
 
