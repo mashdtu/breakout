@@ -1,33 +1,45 @@
+import java.awt.event.KeyEvent;
+
 public class Platform {
-    private int[] pos;
-    private int[] vel;
-    private int width, height;
+    public static void main(String[] args) {
+        // Platformens dimensioner
+        double platformX = 0.5;
+        double platformY = 0.1;
+        double platformBredde = 0.1;
+        double platformHoejde = 0.025;
+        double speed = 0.02;
 
-    public Platform(int x, int y, int vx, int vy, int w, int h) {
-        pos = new int[] {x, y};
-        vel = new int[] {vx, vy};
-        width = w;
-        height = h;
-    }
+        // Canvas størrelse
+        StdDraw.setCanvasSize(800, 600);
+        StdDraw.setXscale(0, 1);
+        StdDraw.setYscale(0, 1);
 
-    public void move() {
-        pos[0] += vel[0];
-        pos[1] += vel[1];
-    }
+        while (true) {
+            // Opdater skærmen, for at lægge det nye frame på
+            StdDraw.clear(StdDraw.BLACK);
 
-    public int[] getPos() {
-        return pos;
-    }
+            // Checker om højre og venstre knapperne er trykket, for at få platformen til at flytte sig
+            if (StdDraw.isKeyPressed(KeyEvent.VK_LEFT)) {
+                platformX -= speed;
+            }
+            if (StdDraw.isKeyPressed(KeyEvent.VK_RIGHT)) {
+                platformX += speed;
+            }
 
-    public int[] getVel() {
-        return vel;
-    }
+            // Sørger for at platformen ikke gå ud af bounds
+            if (platformX - platformBredde / 2 < 0) {
+                platformX = platformBredde / 2;
+            }
+            if (platformX + platformBredde / 2 > 1) {
+                platformX = 1 - platformBredde / 2;
+            }
 
-    public int getWidth() {
-        return width;
-    }
+            // Konstruktionen af platformen
+            StdDraw.setPenColor(StdDraw.WHITE);
+            StdDraw.filledRectangle(platformX, platformY, platformBredde / 2, platformHoejde / 2);
 
-    public int getHeight() {
-        return height;
+            // Opdatere framesne, så det ikke lagger
+            StdDraw.show(10);
+        }
     }
 }
