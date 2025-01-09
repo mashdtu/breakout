@@ -82,9 +82,14 @@ public class GameSetup
         return wall;
     }
 
-    public Platform gPlatform()
+    public Platform getPlatform()
     {
         return platform;
+    }
+
+    public Ball getBall()
+    {
+        return ball;
     }
    
 }

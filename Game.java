@@ -1,19 +1,21 @@
 public class Game {
     private Platform platform;
     private Ball ball;
-    private Block[] blocks;
+    private Block[][] blocks;
     private Wall[] wall;
     private int width, height;
     private boolean gameOver = false;
 
     private GameSetup gameSetup = new GameSetup();
-    
+
+    /* 
     public Game(Platform p, Ball b, int w, int h) {
         platform = p;
         ball = b;
         width = w;
         height = h;
     }
+    */
 
     public void gameLoop () {
         while (!gameOver) {
@@ -41,9 +43,12 @@ public class Game {
         }
     }
 
-    private void drawStartSetup()
+    public void drawStartSetup()
     {
         gameSetup.drawStartGame();
+        platform = gameSetup.getPlatform();
+        wall = gameSetup.getWalls();
+        blocks = gameSetup.getBlocks();
     }
 
     private void setInitialBlocks() {
