@@ -1,3 +1,6 @@
+import javafx.scene.paint.Color;
+import java.lang.Object;
+
 public class Ball {
     private int[] pos;
     private int[] vel;
