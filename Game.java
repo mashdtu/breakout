@@ -2,6 +2,7 @@ public class Game {
     private Platform platform;
     private Ball ball;
     private Block[] blocks;
+    private Wall[] wall;
     private int width, height;
     private boolean gameOver = false;
 
